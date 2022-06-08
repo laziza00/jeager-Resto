@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom"
+import './App.scss';
+import Layout from './Componenets/Layout/Layout';
+import SideBar from './Componenets/Hero/SideBar/SideBar';
+import HeroBasic from './Componenets/Hero/HeroBasic/HeroBasic';
+import Main from './Componenets/Main'
+import SaveList from "./Componenets/SaveList/SaveList";
+import HeroRight from "./Componenets/Hero/HeroRight/HeroRight";
+import { useState, useEffect } from "react";
+import Foods from './Componenets/object'
 
 function App() {
+  const [arr, setArr] =useState([])
+  useEffect(()=> {
+    setArr(Foods)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <div className="App">
+            <SideBar/>
+            <HeroBasic
+            arr ={arr}
+            setArr ={setArr}
+            Foods ={Foods}
+            />
+            <HeroRight/>
+      </div>
+    </Layout>
   );
 }
 

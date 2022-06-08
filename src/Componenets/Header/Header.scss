@@ -1,0 +1,42 @@
+@import '../../assets/sass/main.scss';
+
+.header {
+    padding: 24px;
+    @include between;
+    width: 100% !important;
+    &__title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 140%;
+        color: $white-color;
+        margin: 0 0 4px 0;
+    }
+    &__date {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color:  #E0E6E9;;
+    }
+    &__input-box {
+        background: #2D303E;
+        border: 1px solid $bg-color2;
+        border-radius: 8px;
+        padding: 14px;
+        @include between;
+    }
+    &__input-box i{
+       font-size: 18px;
+       color: $white-color;
+       margin: 0 11px 0 0;
+    }
+    &__input {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: $gray-color;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 5px;
+    }
+}

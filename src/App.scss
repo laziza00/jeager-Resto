@@ -1,0 +1,26 @@
+@import './assets/sass/main.scss';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #252836;;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Barlow', sans-serif;
+  overflow-x: hidden;
+}
+
+.App {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}

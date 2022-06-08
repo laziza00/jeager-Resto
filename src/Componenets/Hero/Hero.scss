@@ -1,0 +1,6 @@
+@import '../../assets/sass/main.scss';
+
+.hero {
+    @include between;
+    width: 100%;
+}
