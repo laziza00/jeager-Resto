@@ -8,26 +8,21 @@ import SaveList from "./Componenets/SaveList/SaveList";
 import HeroRight from "./Componenets/Hero/HeroRight/HeroRight";
 import { useState, useEffect } from "react";
 import Foods from './Componenets/object'
+// import Settings from "./Componenets/Settings/Settings";
 
 function App() {
-  const [arr, setArr] =useState([])
-  useEffect(()=> {
-    setArr(Foods)
-  }, [])
+
 
   return (
-    <Layout>
-      <div className="App">
-            <SideBar/>
-            <HeroBasic
-            arr ={arr}
-            setArr ={setArr}
-            Foods ={Foods}
-            />
-            <HeroRight/>
-      </div>
-    </Layout>
-  );
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Main/>} />
+      </Routes>
+      {/* <Routes>
+        <Route path="settings" element={<Settings/>} />
+      </Routes> */}
+    </div>
+  )
 }
 
 export default App;

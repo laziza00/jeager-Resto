@@ -27,7 +27,7 @@ function Header(props) {
             <p className='header__date'>Tuesday, 2 Feb 2021</p>
         </div>
         <div className='header__input-box'>
-            <i class='bx bx-search'></i>
+            <i className='bx bx-search'></i>
             <input className='header__input' onChange={searchHandler} type="text" placeholder='Search for food, coffe, etc..' />
         </div>
     </div>

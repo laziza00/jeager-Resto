@@ -45,8 +45,12 @@ function HeroBasic(props) {
                  title ={item.title}
                  img ={item.img}
                  price ={item.price}
+                 item ={item}
                  theRest ={item.theRest}
                  foodType ={item.foodType}
+                 addItems={props.addItems}
+                 newrArr ={props.newrArr}
+                 setNewArr ={props.setNewArr}
                  />
                 )
             })}

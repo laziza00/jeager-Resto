@@ -1,0 +1,108 @@
+@import '../../assets/sass/main.scss';
+
+.ofcanvas {
+    background-color: $bg-color;
+    width: 430px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    // transform: translateX(-430px);
+    display: none;
+    padding: 24px;
+    z-index: 50;
+  &__title {
+      padding: 40px 0 0 0;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 140%;
+      color: $white-color;
+      margin: 0 0 8px 0;
+  }
+  &__title-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $gray-color;
+    margin: 0 0 24px 0;
+  }
+  &__inner-box {
+      border-top: 1px solid $border-color;
+      padding: 24px 0;
+  }
+  &__method {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: $white-color;
+    margin: 0 0 16px 0;
+  }
+  &__method-btns {
+      @include d-flex;
+      margin: 0 0 16px 0;
+  }
+  &__method-btn {
+    background: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 15px 18px 10px 18px;
+    margin: 0 8px 0 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $gray-color;
+    width: 111px;
+    height: 64px;
+    &:hover {
+        border: 1px solid $white-color;
+        transition: all 0.3s ease;
+        color: $white-color;
+    }
+    &:hover i{
+        color: $white-color;
+        transition: all 0.3s ease
+    }
+  }
+  &__method-btn i{
+    font-size: 16px;
+    color: $gray-color;
+
+  }
+  &__btns {
+      @include between;
+      width: 100%;
+  }
+  &__btn {
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $primary-color;
+    padding: 14px 34px;
+    border: 1px solid $primary-color;
+    width: 48%;
+    height: 60px;
+    &:hover {
+        background: $primary-color;
+        box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+        color: #fafafa;
+        transition: all 0.3s ease;
+    }
+}
+
+}
+.openModal {
+    animation: of-anim ease ;
+    display: block;
+    right: 0;
+    transition: all 0.3s ease;
+}
+@keyframes of-anim {
+    0% {
+        transform: translateX(-430px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

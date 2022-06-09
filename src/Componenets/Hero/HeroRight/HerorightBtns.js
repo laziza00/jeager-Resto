@@ -32,7 +32,7 @@ function HerorightBtns() {
         {btns.map((btn, i)=> {
             return(
                 <NavLink to="/" className="heroright__link" key={i} >
-                    <button id={btn.id} className={`heroright__btn ${activeBtn} ? active-btn  : " "`} onClick={()=>activeChangeHandler()}>
+                    <button id={btn.id} className="heroright__btn" onClick={()=>activeChangeHandler()}>
                          {btn.nameBtn}
                     </button>
                 </NavLink>

@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../HeroBasic.scss'
+import Foods from '../../../object';
 
 
 function HeroBasicItems(props) {
-console.log(props.id);
-    const addItems =(e)=> {
-        console.log(e.target.id);
-    }
+
 
   return (
-    <li className='herobasic__item' id={props.id} onClick={addItems}>
+    <li className='herobasic__item' id={props.id} onClick={()=>props.addItems(props.item)}>
         <img className='herobasic__item-img' src={props.img} alt="img" />
         <div className='herobasic__item-inner'>
             <h3 className='herobasic__item-title'>

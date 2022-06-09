@@ -4,8 +4,34 @@ import HerorightBtns from './HerorightBtns'
 import './HeroRight.scss'
 import Foods from '../../object'
 import HeroRightItems from './HeroRightItems'
+import { useState, useEffect } from "react";
+import Offcanvas from '../../Offcanvas/Offcanvas'
 
-function HeroRight() {
+
+
+
+function HeroRight({newrArr,  counter, removeItem, suma }) {
+
+
+    const [openOf, setOpenOf] = useState(false);
+    const CanvasOpen = () => setOpenOf(!openOf);
+    const CanvasClose = () => setOpenOf(!openOf);
+
+    const [editArr, setEditdArr] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
+
+    useEffect(() => {
+
+        let count = 0; 
+        newrArr && newrArr.forEach(item => {
+            count += item.price;
+        });
+        setTotalPrice(count)
+        let temp = [...new Set(newrArr && newrArr.map(item => item))];
+
+        setEditdArr(temp)
+    }, [newrArr])
+
   return (
     <div className='heroright'>
       
@@ -20,7 +46,7 @@ function HeroRight() {
                 </div>
             </div>
             <ul className='heroright__list'>
-                {Foods.map((item, i)=> {
+                {editArr && editArr.map((item, i)=> {
                     return (
                         <HeroRightItems
                         key ={i}
@@ -29,7 +55,10 @@ function HeroRight() {
                         title ={item.title}
                         price ={item.price}
                         img ={item.img}
-                      
+                        removeItem ={removeItem}
+                        suma ={suma}
+                        count ={item.count}
+                        totalPrice ={totalPrice}
                         />
                     )
                 })}
@@ -44,12 +73,17 @@ function HeroRight() {
                     <p className='heroright__discount'>Sub total</p>
                     <p className='heroright__discount-zero'>$21,03</p>
                 </div>
-                <button className='heroright__foot-btn'>Continue to Payment</button>
+                <button className='heroright__foot-btn' onClick={CanvasOpen}>Continue to Payment</button>
+            
             </div>
         </div>
-
+        <Offcanvas
+        CanvasClose ={CanvasClose}
+        openOf ={openOf}
+        />
     </div>
   )
 }
+
 
 export default HeroRight

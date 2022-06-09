@@ -14,13 +14,13 @@ function HeroRightItems(props) {
         </div>
 
         <div style={{display: 'flex'}}>
-            <button className='heroright__item-count'>1</button>
-            <p className='heroright__item-big__price'>${props.price}</p>
+            <button className='heroright__item-count'>{props.count}</button>
+            <p className='heroright__item-big__price'>${props.totalPrice}</p>
         </div>
     </div>
     <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <p className='heroright__spic-text'>Please, just a little bit spicy only.</p>
-        <button className='heroright__spic-btn'><i class='bx bx-trash-alt'></i></button>
+        <button className='heroright__spic-btn'  onClick={()=>props.removeItem(props.id)}><i className='bx bx-trash-alt'></i></button>
     </div>
 
 </li>
