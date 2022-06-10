@@ -7,12 +7,9 @@ import Foods from './object';
 import Layout from './Layout/Layout';
 import '../App.scss'
 
-function Main() {
+function Main({arr, setArr}) {
 
-  const [arr, setArr] =useState([])
-  useEffect(()=> {
-    setArr(Foods)
-  }, [])
+
 
   const [newrArr, setNewArr] =useState([])
   const [counter, setCounter]= useState(0)
@@ -32,9 +29,6 @@ function Main() {
       let count = newrArr.filter(item => item.id === meal.id);
       meal.count = count.length + 1;
       setNewArr([...newrArr, meal]);
-
-      // if(newrArr.indexOf(item) !== -1) return 
-      // setNewArr([...newrArr, item])
 
       }
       let removeItem = (e) => {

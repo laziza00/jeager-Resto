@@ -17,8 +17,6 @@ const filterItems = (e) => {
     }
 
 }
-
-
   return (
         <button onClick={filterItems} className='herobasic__btn' id={props.id}>{props.item}</button>
   )

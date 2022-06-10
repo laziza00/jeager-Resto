@@ -1,10 +1,10 @@
 @import '../../../assets/sass/main.scss';
 
 .sitebar {
-    background-color: #1F1D2B;
+    background-color: $bg-color;
     width: 7%;
     height: 100%;
-    display: flex;
+    @include d-flex;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -16,9 +16,7 @@
         height: 56px;
         background: #eb956a7a;
         border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
         position: relative;
         left: 20%;
         margin-bottom: 11px;
@@ -46,7 +44,7 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
-        display: flex;
+        @include d-flex;
         flex-direction: column;
         justify-content: space-around;
     }
@@ -56,9 +54,7 @@
         height: 56px;
         background: transparent;
         border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
         border: none;
         outline: none;
         transition: all 0.2s ease;
@@ -73,7 +69,7 @@
 
             .bx {
                 font-size: 23px;
-                color: #fff;
+                color: $white-color;
             }
         }
     }
@@ -92,16 +88,14 @@
             height: 56px;
             background: #eb956a;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include center;
             border: none;
             outline: none;
        }
 
         .bx {
             font-size: 23px;
-            color: #fff;
+            color: $white-color;
         }
     }
 }

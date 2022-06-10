@@ -12,15 +12,15 @@ function Offcanvas({openOf, CanvasClose}) {
             <h3 className='ofcanvas__method'>Payment Method</h3>
             <div className='ofcanvas__method-btns'>
                 <button className='ofcanvas__method-btn'>
-                    <i class='bx bx-credit-card-front'></i>
+                    <i className='bx bx-credit-card-front'></i>
                     <p>Credit Card</p> 
                 </button>
                 <button className='ofcanvas__method-btn'>
-                    <i class='bx bxl-paypal' ></i>
+                    <i className='bx bxl-paypal' ></i>
                     <p>  Paypal </p> 
                 </button>
                 <button className='ofcanvas__method-btn'>
-                      <i class='bx bx-credit-card'></i>
+                      <i className='bx bx-credit-card'></i>
                       <p> Cash </p> 
                 </button>
             </div>
